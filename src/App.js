@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import { FaGithub, FaLinkedin, FaTwitter, FaNodeJs, FaJava, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaDocker, FaAws } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiMongodb, SiPostgresql, SiJenkins } from 'react-icons/si';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -12,6 +19,22 @@ function App() {
       document.body.classList.remove('dark-mode');
     }
   }, [darkMode]);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para enviar el formulario
+    console.log('Form submitted:', formData);
+    // Limpiar el formulario
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const projects = [
     {
@@ -102,7 +125,10 @@ function App() {
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>Nahuel</h1>
+          <div className="profile-image">
+            <img src="https://via.placeholder.com/200" alt="Nahuel Mendez" />
+          </div>
+          <h1>Nahuel Mendez</h1>
           <h2>Full Stack Developer</h2>
           <p>Especializado en Backend Development</p>
         </div>
@@ -127,29 +153,72 @@ function App() {
           <div className="skill-category">
             <h3>Backend</h3>
             <ul>
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>SQL/NoSQL</li>
-              <li>APIs RESTful</li>
+              <li>
+                <span className="tech-icon"><FaNodeJs /></span>
+                <span>Node.js</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaPython /></span>
+                <span>Python</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaJava /></span>
+                <span>Java</span>
+              </li>
+              <li>
+                <span className="tech-icon"><SiMongodb /></span>
+                <span>MongoDB</span>
+              </li>
+              <li>
+                <span className="tech-icon"><SiPostgresql /></span>
+                <span>PostgreSQL</span>
+              </li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>Frontend</h3>
             <ul>
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>HTML/CSS</li>
-              <li>TypeScript</li>
+              <li>
+                <span className="tech-icon"><FaReact /></span>
+                <span>React</span>
+              </li>
+              <li>
+                <span className="tech-icon"><SiJavascript /></span>
+                <span>JavaScript</span>
+              </li>
+              <li>
+                <span className="tech-icon"><SiTypescript /></span>
+                <span>TypeScript</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaHtml5 /></span>
+                <span>HTML5</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaCss3Alt /></span>
+                <span>CSS3</span>
+              </li>
             </ul>
           </div>
           <div className="skill-category">
             <h3>DevOps & Tools</h3>
             <ul>
-              <li>Git</li>
-              <li>Docker</li>
-              <li>AWS</li>
-              <li>CI/CD</li>
+              <li>
+                <span className="tech-icon"><FaGitAlt /></span>
+                <span>Git</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaDocker /></span>
+                <span>Docker</span>
+              </li>
+              <li>
+                <span className="tech-icon"><FaAws /></span>
+                <span>AWS</span>
+              </li>
+              <li>
+                <span className="tech-icon"><SiJenkins /></span>
+                <span>CI/CD</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -260,13 +329,53 @@ function App() {
       {/* Contact Section */}
       <section className="contact" id="contact">
         <h2>Contacto</h2>
-        <div className="contact-content">
-          <p>¿Interesado en trabajar juntos? ¡Hablemos!</p>
-          <div className="contact-links">
-            <a href="mailto:tu@email.com">Email</a>
-            <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div className="contact-container">
+          <div className="contact-info">
+            <p>¿Interesado en trabajar juntos? ¡Hablemos!</p>
+            <div className="social-links">
+              <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub className="social-icon" />
+              </a>
+              <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin className="social-icon" />
+              </a>
+              <a href="https://twitter.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <FaTwitter className="social-icon" />
+              </a>
+            </div>
           </div>
+          <form className="contact-form" onSubmit={handleFormSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Tu email"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Tu mensaje"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn">Enviar Mensaje</button>
+          </form>
         </div>
       </section>
     </div>
