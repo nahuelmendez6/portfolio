@@ -64,13 +64,13 @@ const Contact = () => {
         <div className="contact-info">
           <p>¿Interesado en trabajar juntos? ¡Hablemos!</p>
           <div className="social-links">
-            <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/nahuelmendez6" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub className="social-icon" />
             </a>
-            <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="www.linkedin.com/in/nahuel-alejandro-mendez-maturano-87b207285" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin className="social-icon" />
             </a>
-            <a href="https://twitter.com/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <a href="https://x.com/nahumendz" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter className="social-icon" />
             </a>
           </div>
