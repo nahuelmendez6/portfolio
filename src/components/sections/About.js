@@ -4,7 +4,7 @@ const About = () => {
       <h2>Sobre Mí</h2>
       <div className="about-content">
         <p>
-          Soy un desarrollador Full Stack con una sólida experiencia en desarrollo backend.
+          Soy un desarrollador backend con una sólida experiencia en desarrollo con Django.
           Me especializo en crear soluciones robustas y escalables utilizando las mejores prácticas
           y tecnologías modernas.
         </p>

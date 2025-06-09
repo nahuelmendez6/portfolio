@@ -9,8 +9,8 @@ const Hero = () => {
           <img src={profile} alt="Nahuel Mendez" />
         </div>
         <h1>Nahuel Mendez</h1>
-        <h2>Full Stack Developer</h2>
-        <p>Especializado en Backend Development</p>
+        <h2>Backend Developer</h2>
+        {/* <p>Especializado en Backend Development</p> */}
       </div>
     </section>
   );
