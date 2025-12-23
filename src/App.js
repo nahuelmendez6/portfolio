@@ -28,7 +28,7 @@ import ticket4 from './assets/tickets/ticket4.png';
 import ticket5 from './assets/tickets/ticket5.png';
 import ticket6 from './assets/tickets/ticket6.png';
 import ticket7 from './assets/tickets/ticket7.png';
-import ticket8 from './assets/tickets/ticket8.png';
+
 
 import profile from './assets/profile.png';
 
@@ -153,7 +153,6 @@ function App() {
         ticket5,
         ticket6,
         ticket7,
-        ticket8,
       ],
       demoLink: "#",
       githubLink: "#"
