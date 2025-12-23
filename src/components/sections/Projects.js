@@ -3,17 +3,6 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import classroom1 from '../../assets/classroom/classroom1.png';
-import classroom2 from '../../assets/classroom/classroom2.png';
-import classroom3 from '../../assets/classroom/classroom3.png';
-import classroom4 from '../../assets/classroom/classroom4.png';
-import classroom5 from '../../assets/classroom/classroom5.png';
-import classroom6 from '../../assets/classroom/classroom6.png';
-import classroom7 from '../../assets/classroom/classroom7.png';
-import classroom8 from '../../assets/classroom/classroom8.png';
-import classroom9 from '../../assets/classroom/classroom9.png';
-import classroom10 from '../../assets/classroom/classroom10.png';
-import classroom11 from '../../assets/classroom/classroom11.png';
 
 import ticket1 from '../../assets/tickets/ticket1.png';
 import ticket2 from '../../assets/tickets/ticket2.png';
@@ -30,37 +19,6 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Aula virtual para seguimiento de prácticas profesionalizantes",
-      shortDescription: "Aula virtual para gestión de profesores y alumnos",
-      fullDescription: `Aula virtual desarrollada para facilitar el seguimiento de prácticas profesionalizantes entre profesores y estudiantes. Incluye funcionalidades avanzadas como:
-
-          • API RESTful desarrollada con Node.js y Express
-          • Autenticación basada en JWT y control de acceso por roles (administrador, docente, alumno)
-          • Base de datos MongoDB utilizando Mongoose para modelado flexible de datos
-          • Sistema de notificaciones en tiempo real mediante WebSockets para avisos, comentarios y cambios de estado
-          • Documentación de la API con Swagger para facilitar la integración y mantenimiento
-          • Tests automatizados con Jest para asegurar la calidad del código y prevenir errores
-          • Gestión de usuarios, materias, prácticas y evaluaciones
-          • Interfaz amigable para la carga y seguimiento de reportes por parte de los estudiantes
-          • Panel de control para docentes con estadísticas y control de entregas
-          • Arquitectura escalable y organizada siguiendo buenas prácticas de desarrollo backend`,
-      technologies: ["Node.js", "Express", "MySQL", "JWT", "React"],
-      images: [
-        classroom1,
-        classroom2,
-        classroom3,
-        classroom4,
-        classroom5,
-        classroom6,
-        classroom7,
-        classroom8,
-        classroom9,
-        classroom10,
-        classroom11
-      ],
-    },
-    {
-      id: 2,
       title: "Sistema de gestión de comedor",
       shortDescription: "Sistema de emisión de tickets por turno para comedor.",
       fullDescription: `Sistema web integral para gestionar turnos de comedor hospitalario, con las siguientes características:
@@ -85,6 +43,7 @@ const Projects = () => {
         ticket7,
         ticket8,
       ],
+      url: "https://ticmeal.vercel.app/",
     },
   ];
 
@@ -118,6 +77,14 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-links">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-project-btn"
+                >
+                  Ver Página
+                </a>
                 <button 
                   className="view-project-btn"
                   onClick={() => setSelectedProject(project)}

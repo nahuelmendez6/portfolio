@@ -1,5 +1,5 @@
-import { FaNodeJs, FaJava, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiDjango, SiFlask, SiMysql } from 'react-icons/si';
+import { FaNodeJs, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaDocker } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiDjango, SiMysql, SiNestjs } from 'react-icons/si';
 
 const Skills = () => {
   return (
@@ -14,8 +14,8 @@ const Skills = () => {
               <span>Django</span>
             </li>
             <li>
-              <span className="tech-icon"><SiFlask /></span>
-              <span>Flask</span>
+              <span className="tech-icon"><SiNestjs /></span>
+              <span>NestJS</span>
             </li>
             <li>
               <span className="tech-icon"><FaNodeJs /></span>
@@ -24,10 +24,6 @@ const Skills = () => {
             <li>
               <span className="tech-icon"><FaPython /></span>
               <span>Python</span>
-            </li>
-            <li>
-              <span className="tech-icon"><FaJava /></span>
-              <span>Java</span>
             </li>
             <li>
               <span className="tech-icon"><SiMysql /></span>
