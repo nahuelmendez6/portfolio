@@ -11,7 +11,7 @@ import ticket4 from '../../assets/tickets/ticket4.png';
 import ticket5 from '../../assets/tickets/ticket5.png';
 import ticket6 from '../../assets/tickets/ticket6.png';
 import ticket7 from '../../assets/tickets/ticket7.png';
-import ticket8 from '../../assets/tickets/ticket8.png';
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -19,20 +19,17 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Sistema de gestión de comedor",
+      title: "TicMeal - Sistema de Turnos para Comedor",
       shortDescription: "Sistema de emisión de tickets por turno para comedor.",
-      fullDescription: `Sistema web integral para gestionar turnos de comedor hospitalario, con las siguientes características:
-        • Backend en Django y Django REST Framework
-        • Base de datos relacional con MySQL
+      fullDescription: `Sistema web integral para gestionar turnos de comedores institucionales, con las siguientes características:
         • Generación y validación de tickets por usuario y turno
         • Interfaz interactiva desarrollada con React
         • Visualización en tiempo real mediante WebSockets
         • Informes estadísticos con Chart.js
         • Despliegue del sistema en contenedores con Docker
-        • Autenticación y autorización por roles (administrador, cocina, hospital)
-        • Sistema de stock de insumos alimenticios
-        • Soporte PWA para uso en dispositivos móviles`,
-      technologies: ["Python", "Django", "MySQL", "JavaScript", "React", "Docker"],
+        • Autenticación y autorización por roles (administrador, cocina, comensal)
+        • Sistema de stock de insumos alimenticios`,
+      technologies: ["TypeScript", "Nest", "PostgreSQL", "React"],
       images: [
         ticket1,
         ticket2,
@@ -41,7 +38,6 @@ const Projects = () => {
         ticket5,
         ticket6,
         ticket7,
-        ticket8,
       ],
       url: "https://ticmeal.vercel.app/",
     },
@@ -81,6 +77,7 @@ const Projects = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ color: 'white' }}
                   className="view-project-btn"
                 >
                   Ver Página
